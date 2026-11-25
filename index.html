@@ -3,17 +3,250 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ScreenCue</title>
-    <style>
-      :root { color-scheme: dark; font-family: "Segoe UI", sans-serif; }
-      body { max-width: 720px; margin: 0 auto; padding: 48px 24px; background: #101718; color: #eef4ef; line-height: 1.6; }
-      h1 { margin-bottom: .2rem; } p { color: #b5c5be; } a { color: #c8f36b; }
-      nav { display: flex; gap: 18px; margin-top: 28px; }
-    </style>
+    <title>ScreenCue – Private Teleprompter for PowerPoint Speaker Notes (Windows)</title>
+    <meta name="description" content="ScreenCue shows your PowerPoint speaker notes in an always-on-top teleprompter that stays out of screen shares and recordings. For Windows 10 and 11." />
+    <link rel="canonical" href="https://preethamshenoy-ai.github.io/screencue-site/" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/screencue-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ScreenCue" />
+    <meta property="og:title" content="ScreenCue – a private teleprompter for PowerPoint speaker notes" />
+    <meta property="og:description" content="Your speaker notes in an always-on-top teleprompter over your slides, left out when you share or record your screen. Windows 10 and 11." />
+    <meta property="og:url" content="https://preethamshenoy-ai.github.io/screencue-site/" />
+    <meta property="og:image" content="https://preethamshenoy-ai.github.io/screencue-site/img/teleprompter-over-powerpoint-slideshow.png" />
+    <meta property="og:image:width" content="1840" />
+    <meta property="og:image:height" content="1035" />
+    <meta property="og:image:alt" content="ScreenCue's teleprompter showing speaker notes over a PowerPoint slideshow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://preethamshenoy-ai.github.io/screencue-site/#app",
+          "name": "ScreenCue",
+          "description": "A private teleprompter for PowerPoint speaker notes on Windows. It shows your notes in an always-on-top window over your slides, and Windows leaves that window out when you share or record your screen.",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Presentation teleprompter",
+          "operatingSystem": "Windows 10 version 1809 or later, Windows 11",
+          "softwareVersion": "1.0.0",
+          "url": "https://preethamshenoy-ai.github.io/screencue-site/",
+          "installUrl": "https://apps.microsoft.com/detail/9N0VF85M0GS3",
+          "sameAs": ["https://apps.microsoft.com/detail/9N0VF85M0GS3"],
+          "image": "https://preethamshenoy-ai.github.io/screencue-site/img/screencue-logo.png",
+          "screenshot": [
+            "https://preethamshenoy-ai.github.io/screencue-site/img/teleprompter-over-powerpoint-slideshow.png",
+            "https://preethamshenoy-ai.github.io/screencue-site/img/powerpoint-speaker-notes-slide-by-slide.png",
+            "https://preethamshenoy-ai.github.io/screencue-site/img/teleprompter-following-slideshow.png",
+            "https://preethamshenoy-ai.github.io/screencue-site/img/teleprompter-text-size-opacity-controls.png"
+          ],
+          "featureList": [
+            "Reads PowerPoint speaker notes locally, slide by slide",
+            "Always-on-top teleprompter with adjustable text size, background opacity and size",
+            "Hidden from screen sharing and screen recording on Windows 10 version 2004 or later and Windows 11",
+            "Click-through mode",
+            "Follows and controls a running PowerPoint slideshow",
+            "Opens Word, text and Markdown notes as one scrolling cue",
+            "No account, cloud sync, analytics or telemetry"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0.99",
+            "priceCurrency": "USD",
+            "url": "https://apps.microsoft.com/detail/9N0VF85M0GS3",
+            "availability": "https://schema.org/InStock"
+          },
+          "author": { "@type": "Person", "name": "Preetam Shenoy" },
+          "publisher": { "@type": "Person", "name": "Preetam Shenoy" },
+          "brand": { "@type": "Brand", "name": "PeteStudioz.ai" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://preethamshenoy-ai.github.io/screencue-site/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is ScreenCue?",
+              "acceptedAnswer": { "@type": "Answer", "text": "ScreenCue is a Windows app that turns your PowerPoint speaker notes into a private teleprompter. Your notes appear in an always-on-top window over your slides, and Windows leaves that window out when you share or record your screen." }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my audience see my notes when I share my screen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No, on Windows 10 version 2004 or later and on Windows 11. ScreenCue asks Windows to exclude the teleprompter from screen capture, so screen sharing and screen recording show what is behind it instead. On earlier versions of Windows 10, a black box may appear in its place. A camera pointed at your screen, or a hardware capture device, would still see it." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it work with Microsoft Teams, Zoom or Google Meet?",
+              "acceptedAnswer": { "@type": "Answer", "text": "ScreenCue doesn't plug into any meeting app. Windows itself keeps the teleprompter out of screen capture, so it is hidden whichever app you use to share your screen. Before an important talk, run a short test call to check what your audience sees." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need PowerPoint installed?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Not to read notes. ScreenCue reads standard .pptx presentations and Word (.docx), text and Markdown notes on its own. PowerPoint for Windows is needed to follow and control a running slideshow, and to load notes from legacy .ppt, protected or damaged presentations." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the notes follow my slides automatically?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Turn on Sync & control PowerPoint and ScreenCue follows the slideshow running in PowerPoint, showing the notes for the current slide. Your clicker, the arrow keys and Page Up/Down still move the slides, because the teleprompter never takes keyboard focus." }
+            },
+            {
+              "@type": "Question",
+              "name": "Are my presentations or notes uploaded anywhere?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. ScreenCue works on your PC. It has no account, cloud sync, analytics or telemetry, and it doesn't upload your presentations or notes." }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does ScreenCue cost?",
+              "acceptedAnswer": { "@type": "Answer", "text": "US$0.99, a one-time purchase from the Microsoft Store. The Store shows the price in your local currency." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a Mac version?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. ScreenCue runs on Windows 10 (version 1809 or later) and Windows 11." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which files can ScreenCue open?",
+              "acceptedAnswer": { "@type": "Answer", "text": "PowerPoint .pptx, .pptm, .ppsx, .ppsm and .potx files on its own; .ppt, .pps and .pot files through PowerPoint; and Word .docx, plain text (.txt) and Markdown (.md) notes." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <h1>ScreenCue</h1>
-    <p>Private presenter teleprompter for PowerPoint speaker notes, by PeteStudioz.ai.</p>
-    <nav><a href="privacy.html">Privacy policy</a><a href="support.html">Support</a><a href="mailto:pete.studioz.ai@gmail.com">Contact</a></nav>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./"><img src="img/screencue-logo.png" alt="" width="32" height="32" />ScreenCue</a>
+        <nav aria-label="Site">
+          <a href="speaker-notes-while-screen-sharing.html">Guide</a>
+          <a href="#faq">FAQ</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <h1>A private teleprompter for your PowerPoint speaker notes</h1>
+        <p class="lead">ScreenCue shows your speaker notes in an always-on-top window over your slides. When you share or record your screen, Windows leaves the teleprompter out, so your audience sees only your slides.</p>
+        <div class="cta">
+          <a class="button" href="https://apps.microsoft.com/detail/9N0VF85M0GS3">Get it from the Microsoft Store – US$0.99</a>
+          <p class="fineprint">Windows 10 (1809 or later) and Windows 11 · No account · Nothing uploaded</p>
+        </div>
+        <figure>
+          <img class="shot" src="img/teleprompter-over-powerpoint-slideshow.png" width="1840" height="1035" alt="ScreenCue's teleprompter showing speaker notes over a running PowerPoint slideshow" />
+          <figcaption>The teleprompter sits over your slideshow and stays off your shared screen.</figcaption>
+        </figure>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <h2>What ScreenCue does</h2>
+          <div class="grid">
+            <div class="card"><h3>Your notes, slide by slide</h3><p>Open a PowerPoint presentation and ScreenCue reads its speaker notes on your PC. No PowerPoint needed for standard .pptx files.</p></div>
+            <div class="card"><h3>Hidden from screen sharing</h3><p>Windows keeps the teleprompter out of screen sharing and recordings on Windows 10 version 2004 or later and Windows 11.</p></div>
+            <div class="card"><h3>Follows your slideshow</h3><p>With Sync &amp; control PowerPoint on, the notes change with your slides. Clickers, arrow keys and Page Up/Down keep working.</p></div>
+            <div class="card"><h3>Fits where you look</h3><p>Move and resize the teleprompter, set text size and background opacity, and turn on click-through once it's in place.</p></div>
+            <div class="card"><h3>Any notes, not just slides</h3><p>Open a Word, text or Markdown file as one scrolling cue for talks, webinars or recorded videos.</p></div>
+            <div class="card"><h3>Private by design</h3><p>No account, no cloud sync, no analytics. Your presentations and notes never leave your PC.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap narrow">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li><strong>Open your presentation</strong> (.pptx) or a Word, text or Markdown notes file.</li>
+            <li><strong>Select Open teleprompter</strong> and place it where you look while you talk. Near your webcam works well on video calls.</li>
+            <li><strong>Turn on Sync &amp; control PowerPoint</strong>, start your slideshow and present. Your notes follow your slides.</li>
+          </ol>
+          <p>Step-by-step for video calls: <a href="speaker-notes-while-screen-sharing.html">How to see your speaker notes while sharing your screen</a>.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Screenshots</h2>
+          <div class="gallery">
+            <figure>
+              <img class="shot" src="img/powerpoint-speaker-notes-slide-by-slide.png" width="1920" height="1080" loading="lazy" alt="ScreenCue main window listing a presentation's speaker notes slide by slide" />
+              <figcaption>Open a presentation and review speaker notes slide by slide.</figcaption>
+            </figure>
+            <figure>
+              <img class="shot" src="img/teleprompter-following-slideshow.png" width="1840" height="1035" loading="lazy" alt="ScreenCue teleprompter showing the notes for the current slide of a running PowerPoint slideshow" />
+              <figcaption>Follow the running slideshow and move through it with presenter controls.</figcaption>
+            </figure>
+            <figure>
+              <img class="shot" src="img/teleprompter-text-size-opacity-controls.png" width="1920" height="1080" loading="lazy" alt="ScreenCue teleprompter settings for text size, background opacity and click-through" />
+              <figcaption>Tune text size, background opacity and click-through.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="wrap narrow">
+          <h2>Frequently asked questions</h2>
+          <details open>
+            <summary>What is ScreenCue?</summary>
+            <p>ScreenCue is a Windows app that turns your PowerPoint speaker notes into a private teleprompter. Your notes appear in an always-on-top window over your slides, and Windows leaves that window out when you share or record your screen.</p>
+          </details>
+          <details>
+            <summary>Will my audience see my notes when I share my screen?</summary>
+            <p>No, on Windows 10 version 2004 or later and on Windows 11. ScreenCue asks Windows to exclude the teleprompter from screen capture, so screen sharing and screen recording show what is behind it instead. On earlier versions of Windows 10, a black box may appear in its place. A camera pointed at your screen, or a hardware capture device, would still see it.</p>
+          </details>
+          <details>
+            <summary>Does it work with Microsoft Teams, Zoom or Google Meet?</summary>
+            <p>ScreenCue doesn't plug into any meeting app. Windows itself keeps the teleprompter out of screen capture, so it is hidden whichever app you use to share your screen. Before an important talk, run a short test call to check what your audience sees.</p>
+          </details>
+          <details>
+            <summary>Do I need PowerPoint installed?</summary>
+            <p>Not to read notes. ScreenCue reads standard .pptx presentations and Word (.docx), text and Markdown notes on its own. PowerPoint for Windows is needed to follow and control a running slideshow, and to load notes from legacy .ppt, protected or damaged presentations.</p>
+          </details>
+          <details>
+            <summary>Can the notes follow my slides automatically?</summary>
+            <p>Yes. Turn on Sync &amp; control PowerPoint and ScreenCue follows the slideshow running in PowerPoint, showing the notes for the current slide. Your clicker, the arrow keys and Page Up/Down still move the slides, because the teleprompter never takes keyboard focus.</p>
+          </details>
+          <details>
+            <summary>Are my presentations or notes uploaded anywhere?</summary>
+            <p>No. ScreenCue works on your PC. It has no account, cloud sync, analytics or telemetry, and it doesn't upload your presentations or notes. See the <a href="privacy.html">privacy policy</a>.</p>
+          </details>
+          <details>
+            <summary>How much does ScreenCue cost?</summary>
+            <p>US$0.99, a one-time purchase from the <a href="https://apps.microsoft.com/detail/9N0VF85M0GS3">Microsoft Store</a>. The Store shows the price in your local currency.</p>
+          </details>
+          <details>
+            <summary>Is there a Mac version?</summary>
+            <p>No. ScreenCue runs on Windows 10 (version 1809 or later) and Windows 11.</p>
+          </details>
+          <details>
+            <summary>Which files can ScreenCue open?</summary>
+            <p>PowerPoint .pptx, .pptm, .ppsx, .ppsm and .potx files on its own; .ppt, .pps and .pot files through PowerPoint; and Word .docx, plain text (.txt) and Markdown (.md) notes.</p>
+          </details>
+          <div class="cta">
+            <a class="button" href="https://apps.microsoft.com/detail/9N0VF85M0GS3">Get ScreenCue from the Microsoft Store</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <nav aria-label="Footer">
+          <a href="speaker-notes-while-screen-sharing.html">Guide</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="mailto:pete.studioz.ai@gmail.com">Contact</a>
+        </nav>
+        <p>ScreenCue is made by PeteStudioz.ai and published on the Microsoft Store by Preetam Shenoy.</p>
+        <p>Microsoft, PowerPoint and Teams are trademarks of the Microsoft group of companies. Zoom and Google Meet are trademarks of their respective owners. ScreenCue is an independent application and is not affiliated with or endorsed by Microsoft, Zoom or Google.</p>
+      </div>
+    </footer>
   </body>
 </html>

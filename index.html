@@ -18,6 +18,7 @@
     <meta property="og:image:height" content="1035" />
     <meta property="og:image:alt" content="ScreenCue's teleprompter showing speaker notes over a PowerPoint slideshow" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="max-image-preview:large" />
     <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
     {
@@ -58,9 +59,26 @@
             "url": "https://apps.microsoft.com/detail/9N0VF85M0GS3",
             "availability": "https://schema.org/InStock"
           },
-          "author": { "@type": "Person", "name": "Preetam Shenoy" },
-          "publisher": { "@type": "Person", "name": "Preetam Shenoy" },
+          "datePublished": "2026-11",
+          "author": { "@id": "https://preethamshenoy-ai.github.io/screencue-site/#publisher" },
+          "publisher": { "@id": "https://preethamshenoy-ai.github.io/screencue-site/#publisher" },
           "brand": { "@type": "Brand", "name": "PeteStudioz.ai" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://preethamshenoy-ai.github.io/screencue-site/#publisher",
+          "name": "Preetam Shenoy",
+          "brand": { "@type": "Brand", "name": "PeteStudioz.ai" },
+          "email": "pete.studioz.ai@gmail.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://preethamshenoy-ai.github.io/screencue-site/#website",
+          "name": "ScreenCue",
+          "url": "https://preethamshenoy-ai.github.io/screencue-site/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://preethamshenoy-ai.github.io/screencue-site/#publisher" },
+          "about": { "@id": "https://preethamshenoy-ai.github.io/screencue-site/#app" }
         },
         {
           "@type": "FAQPage",
@@ -110,6 +128,16 @@
               "@type": "Question",
               "name": "Which files can ScreenCue open?",
               "acceptedAnswer": { "@type": "Answer", "text": "PowerPoint .pptx, .pptm, .ppsx, .ppsm and .potx files on its own; .ppt, .pps and .pot files through PowerPoint; and Word .docx, plain text (.txt) and Markdown (.md) notes." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the teleprompter scroll automatically?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. ScreenCue shows the notes for the current slide and switches to the next slide's notes when the slide changes. Long notes, or a Word, text or Markdown script, you scroll yourself, at your own pace." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does ScreenCue use AI?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. ScreenCue doesn't write, rewrite or summarize your notes, and it doesn't send them to any AI service. It shows the notes you wrote, on your PC." }
             }
           ]
         }
@@ -122,7 +150,7 @@
       <div class="wrap">
         <a class="brand" href="./"><img src="img/screencue-logo.png" alt="" width="32" height="32" />ScreenCue</a>
         <nav aria-label="Site">
-          <a href="speaker-notes-while-screen-sharing.html">Guide</a>
+          <a href="#guides">Guides</a>
           <a href="#faq">FAQ</a>
           <a href="support.html">Support</a>
           <a href="privacy.html">Privacy</a>
@@ -166,11 +194,22 @@
             <li><strong>Select Open teleprompter</strong> and place it where you look while you talk. Near your webcam works well on video calls.</li>
             <li><strong>Turn on Sync &amp; control PowerPoint</strong>, start your slideshow and present. Your notes follow your slides.</li>
           </ol>
-          <p>Step-by-step for video calls: <a href="speaker-notes-while-screen-sharing.html">How to see your speaker notes while sharing your screen</a>.</p>
         </div>
       </section>
 
-      <section>
+      <section id="guides">
+        <div class="wrap narrow">
+          <h2>Guides</h2>
+          <ul class="guide-list">
+            <li class="card"><a href="speaker-notes-while-screen-sharing.html">How to see your speaker notes while sharing your screen</a><p>Four ways to keep your notes in view on a video call without your audience seeing them.</p></li>
+            <li class="card"><a href="powerpoint-teleprompter.html">How to use your PowerPoint speaker notes as a teleprompter</a><p>PowerPoint's own options, when each fits, and how to write notes that read well from a teleprompter.</p></li>
+            <li class="card"><a href="teleprompter-for-screen-recording.html">How to read a script while recording your screen</a><p>Keep your script on screen for tutorials, demos and webinars without it showing in the video.</p></li>
+            <li class="card"><a href="facts.html">ScreenCue fact sheet</a><p>Features, price, requirements, file types and what ScreenCue doesn't do, on one page.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="screenshots">
         <div class="wrap">
           <h2>Screenshots</h2>
           <div class="gallery">
@@ -229,6 +268,14 @@
             <summary>Which files can ScreenCue open?</summary>
             <p>PowerPoint .pptx, .pptm, .ppsx, .ppsm and .potx files on its own; .ppt, .pps and .pot files through PowerPoint; and Word .docx, plain text (.txt) and Markdown (.md) notes.</p>
           </details>
+          <details>
+            <summary>Does the teleprompter scroll automatically?</summary>
+            <p>No. ScreenCue shows the notes for the current slide and switches to the next slide's notes when the slide changes. Long notes, or a Word, text or Markdown script, you scroll yourself, at your own pace.</p>
+          </details>
+          <details>
+            <summary>Does ScreenCue use AI?</summary>
+            <p>No. ScreenCue doesn't write, rewrite or summarize your notes, and it doesn't send them to any AI service. It shows the notes you wrote, on your PC.</p>
+          </details>
           <div class="cta">
             <a class="button" href="https://apps.microsoft.com/detail/9N0VF85M0GS3">Get ScreenCue from the Microsoft Store</a>
           </div>
@@ -239,7 +286,8 @@
     <footer class="site-footer">
       <div class="wrap">
         <nav aria-label="Footer">
-          <a href="speaker-notes-while-screen-sharing.html">Guide</a>
+          <a href="#guides">Guides</a>
+          <a href="facts.html">Fact sheet</a>
           <a href="support.html">Support</a>
           <a href="privacy.html">Privacy policy</a>
           <a href="mailto:pete.studioz.ai@gmail.com">Contact</a>

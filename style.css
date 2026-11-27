@@ -71,6 +71,20 @@ section + section { border-top: 1px solid var(--border); }
 .faq details p { margin-top: 0; }
 
 article h2 { margin-top: 40px; }
+
+.answer { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 16px 20px; margin: 24px 0; }
+.answer p { margin: 0; color: var(--text); }
+
+.table-wrap { overflow-x: auto; margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+th { color: var(--text); font-weight: 600; }
+td { color: var(--muted); }
+.facts th { width: 34%; }
+
+.guide-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.guide-list a { font-weight: 600; }
+.guide-list p { margin: 4px 0 0; }
 article .card { margin: 16px 0; }
 
 .site-footer { border-top: 1px solid var(--border); padding: 28px 0 40px; font-size: .9rem; }
